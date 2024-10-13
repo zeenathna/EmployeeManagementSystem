@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee System</title>
+</head>
+<body>
+    <header>
+        <!-- Navbar or header content -->
+    </header>
+    <main>
+    </main>
+    <h1>Employee Information</h1>
+    <!-- Assuming you're rendering one employee -->
+    
+    <h2>All Employees</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through your employees array and render rows here -->
+            <% employees.forEach(employee => { %>
+                <tr>
+                    <td><%= employee.Name %></td>
+                    <td><%= employee.salary %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <a href="/add">
+        <button>Add New Employee</button>
+    </a>
+</body>
+</html>

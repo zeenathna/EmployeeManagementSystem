@@ -1,0 +1,18 @@
+<%- include('layout') %>
+<h2>Add Employee</h2>
+<form action="/add" method="POST">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+    
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="department">Department:</label>
+    <select id="department" name="department" multiple>
+        <% departments.forEach(department => { %>
+            <option value="<%= department._id %>"><%= department.name %></option>
+        <% }) %>
+    </select>
+
+    <button type="submit">Add Employee</button>
+</form>
